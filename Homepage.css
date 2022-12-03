@@ -1,0 +1,567 @@
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    box-sizing: border-box;
+    text-decoration: none;
+    -webkit-text-size-adjust: 100%;
+}
+
+/*===================== LOGO =====================*/
+
+.main-width {
+    width: 100%;
+    min-height: 100vh;
+    background: #191919;
+}
+
+.logo {
+    position: absolute;
+}
+
+.logo a {
+    text-decoration: none;
+}
+
+.logo a h1 {
+    font-family: sans-serif;
+    position: relative;
+    top: 20px;
+    left: 5.5em;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    box-shadow: -1px -1px 4px rgba(60, 60, 60, 0.5),
+    5px 5px 8px rgba(10,10,10,0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 750;
+    color: #191919;
+    text-shadow:  -2px -2px 2px rgba(80,80,80,0.4),
+                2px 2px 5px rgba(0,0,0,0.7);
+}
+
+.logo a h1:hover {
+    color: #e8a125;
+}
+
+/*======================= Navigation ===================*/
+
+.nav ul {
+    position: relative;
+    top: 37vh;
+    left: 10px;
+    width: 10%;
+}
+
+.nav ul li {
+    list-style: none;
+}
+
+.nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav ul li a span {
+    margin: 20px 0 20px 0;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -1px -1px 4px rgba(60, 60, 60, 0.5),
+    5px 5px 8px rgba(10,10,10,0.9);
+    z-index: 10;
+}
+
+.nav ul li .tooltip {
+    height: 35px;
+    width: 80px;
+    background: #fff;
+    color: #191919;
+    font-size: 10px;
+    border-radius: 30px;
+    position: absolute;
+    text-align: center;
+    left: 70px;
+    z-index: 2;
+    visibility:hidden;
+}
+
+.nav ul li .tooltip::before {
+    content: '';
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background: #fff;
+    z-index: -2;
+    left: -3px;
+    transform: rotate(45deg);
+    top: 10.5px;
+}
+
+.nav ul li a:hover {
+    color: #e8a125;
+}
+
+.nav ul li a .fa-house {
+    position: fixed;
+    top: 37%;
+}
+
+.nav ul li a .fa-house:hover > .home {
+    visibility:visible;
+}
+
+.nav ul li a .fa-briefcase {
+    position: fixed;
+    top: 47%;
+}
+
+.nav ul li a .fa-briefcase:hover > .project {
+    visibility:visible;
+}
+
+.nav ul li a .fa-user {
+    position: fixed;
+    top: 57%;
+}
+
+.nav ul li a .fa-user:hover > .aboutMe {
+    visibility:visible;
+}
+
+
+
+/*============================= Display Text ===============================*/
+
+.name {
+    position: absolute;
+    left: 180px;
+    top: 35vh;
+    height: 75px;
+    color: #e5e6e6;
+    font-family: sans-serif;
+    display: block;
+}
+
+.name h1 {
+    font-family: 'Josefin Sans', sans-serif; 
+}
+
+.name h1 p {
+    font-size: 1.5em;
+    display: inline-block;
+    font-family: cursive;
+    margin-left: 5px;
+    color: #e8a125;
+}
+
+.name h2 {
+    top: 20px;
+    font-size: 4em;
+    display: inline-flex;
+    width: 300px;
+}
+
+.name h2 p {
+    color: #202020;
+    margin: 0 0 0 13px;
+   -webkit-text-stroke: 0.1vw #e8a125; 
+}
+
+.name h2 p::before {
+    content: attr(data-text);
+    position: absolute;
+    height: 100%;
+    color: #e8a125;
+    -webkit-text-stroke: 0vw #191919;
+    border-right: 5px solid #e8a125;
+    overflow: hidden;
+    animation: stroker 4s ease-in-out infinite;
+}
+
+@keyframes stroker {
+    0%,
+    100% {
+        width: 0%;
+    }
+    50% {
+        width: 5em;
+    }
+}
+
+.name h3 {
+    font-size: 2em;
+    font-family: cursive;
+    position: relative; 
+    display: flex;
+}
+
+.name h3 p {
+    margin-left: 10px;
+}
+
+.name h5 p {
+    font-size: 12px;
+    top: 10px;
+    position: relative;
+    left: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.cv {
+    position: relative;
+    top: 60px;
+}
+
+.cv a {
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 13px 25px 13px 25px;
+    border-radius: 5px;
+    width: 50px;
+    text-align: center;
+    background: #191919;
+    text-decoration: none;
+    color: #fff;
+    font-size: 10px;
+    box-shadow: -1px -1px 4px rgba(60, 60, 60, 0.5),
+                    5px 5px 8px rgba(10,10,10,0.9);
+}
+
+.cv a:hover {
+    color: #e8a125;
+}
+
+
+/*================================== Card ===================================*/
+
+.card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    float: right;
+    right: 10em;
+    top: 40vh;
+}
+
+.card ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card ul li {
+    position: relative;
+    height: 154px;
+    width: 160px;
+    list-style: none;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.card ul li span {
+    width: 125px;
+    height: 130px;
+    padding-top: 20px;
+    font-size: 50px;
+    top: -30px;
+    position: relative;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    box-shadow: -2px -2px 4px rgba(50, 50, 50, 0.5),
+    5px 5px 8px rgba(10,10,10,0.9);
+}
+
+.card ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.card ul li h4 {
+    font-size: 20px;
+    position: absolute;
+    top: 90px;
+    left: 33px;
+}
+
+.card ul li h5 {
+    font-size: 20px;
+    position: absolute;
+    top: 90px;
+    left: 42px;
+}
+
+.card ul li h6 {
+    font-size: 20px;
+    position: absolute;
+    top: 90px;
+    left: 15px;
+}
+
+.card ul li .fa-html5:hover {
+    color: #f06529;
+    transition: .2s;
+}
+
+.card ul li .fa-css3-alt:hover {
+    color: #2965f1;
+    transition: .2s;
+}
+
+.card ul li .fa-js:hover {
+    color: #f0db4f;
+    transition: .2s;
+}
+
+.card h3 {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.card h1 {
+    color: #191919;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-weight: 1000;
+    font-size: 3rem;
+    border-radius: 15px;
+    position: absolute;
+    left: 5%;
+    top: 110%;
+    height: 150px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset -1px -1px 4px rgba(60, 60, 60, 0.5),
+                inset 5px 5px 8px rgba(10,10,10,0.9);
+    text-shadow: -1px -1px 2px rgba(60, 60, 60, 0.5),
+                5px 5px 8px rgba(10,10,10,0.9);
+}
+
+
+/*======================= Video Box ================================*/
+
+.video-box {
+    min-height: 100vh;
+    width: 100%;
+    background: #191919;
+    position: relative;
+}
+
+.video-box p {
+    position: relative;
+    top: -50px;
+    left: 80px;
+    font-family: sans-serif;
+    font-size: 6rem;
+    font-weight: 800;
+    color: #151515;
+    text-shadow: -1px -1px 4px rgba(60, 60, 60, 0.5),
+                 5px 5px 8px rgba(10,10,10,0.9);
+    width: 0%;
+}
+
+.video-box p::before {
+    content: '';
+    height: 5px;
+    width: 300px;
+    bottom: 5px;
+    border-radius: 3px;
+    position: absolute;
+    box-shadow: -2px -2px 2px rgba(80, 80, 80, 0.2),
+    2px 2px 8px rgba(0,0,0,0.5);
+}
+
+.video-box span {
+    height: 500px;
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -2px -2px 4px rgba(50, 50, 50, 0.5),
+    5px 5px 8px rgba(10,10,10,0.9);
+    position: relative;
+    left: 25%
+}
+
+.video-box span::before {
+    content: '';
+    height: 95%;
+    width: 97%;
+    box-shadow: inset 5px 5px 5px rgba(0,0,0,0.2),
+                inset -5px -5px 5px rgba(0,0,0,0.2);
+}
+
+
+
+/*============================= Work Box ===================================*/
+
+
+.work-box {
+    min-height: 100vh;
+    width: 100%;
+    background: #191919;
+}
+
+.work-box p {
+    position: relative;
+    top: 20px;
+    left: 80px;
+    display: flex;
+    font-family: sans-serif;
+    font-size: 6rem;
+    font-weight: 800;
+    color: #151515;
+    text-shadow: -1px -1px 4px rgba(60, 60, 60, 0.5),
+                 5px 5px 8px rgba(10,10,10,0.9);
+    width: 33.5%;
+}
+
+.work-box p::before {
+    content: '';
+    height: 5px;
+    width: 100%;
+    bottom: -5px;
+    border-radius: 3px;
+    position: absolute;
+    box-shadow: -2px -2px 2px rgba(80, 80, 80, 0.2),
+    2px 2px 8px rgba(0,0,0,0.5);
+}
+
+.work-box span {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.work-box span .box {
+    height: 270px;
+    width: 250px; 
+    background: #191919;
+    box-shadow: -1px -1px 4px rgba(60, 60, 60, 0.5),
+    5px 5px 8px rgba(10,10,10,0.9);
+    text-decoration: none;
+    margin: 0 45px 0 45px;
+    position: relative;
+    top: 20vh;
+}
+
+.work-box a {
+    text-decoration: none;
+}
+
+.work-box button {
+    height: 40px;
+    width: 90px;
+    position: relative;
+    top: 30vh;
+    background: #191919;
+    border: 1px solid transparent;
+    color: #fff;
+    font-family: 'Josefin Sans', sans-serif;
+    box-shadow: -1px -1px 4px rgba(60, 60, 60, 0.5),
+                5px 5px 8px rgba(10,10,10,0.9);
+    left: 50%;
+    transform: translateX(-50%);
+    transition: .3s;
+}
+
+.work-box button:hover {
+    color: #e8a125;
+}
+
+/*======================= Contact Box ===========================*/
+
+.contact-box {
+    min-height: 100vh;
+    width: 100%;
+    background: #191919;
+}
+
+.contact-box h1 {
+    position: relative;
+    top: -40px;
+    left: 80px;
+    display: flex;
+    font-family: sans-serif;
+    font-size: 6rem;
+    font-weight: 800;
+    color: #151515;
+    text-shadow: -1px -1px 4px rgba(60, 60, 60, 0.5),
+                 5px 5px 8px rgba(10,10,10,0.9);
+    width: 40%;
+}
+
+.contact-box h1::before {
+    content: '';
+    height: 5px;
+    width: 100%;
+    bottom: 0px;
+    border-radius: 3px;
+    position: absolute;
+    box-shadow: -2px -2px 2px rgba(80, 80, 80, 0.2),
+    2px 2px 8px rgba(0,0,0,0.5);
+}
+
+.contact-box ul li {
+    position: relative;
+    height: 150px;
+    width: 140px;
+    border-radius: 10px;
+    margin: 20px 0 20px 0;
+    top: 5vh;
+    left: 13em;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    box-shadow: inset -1px -1px 4px rgba(60, 60, 60, 0.5),
+                inset 5px 5px 8px rgba(10,10,10,0.9);
+}
+
+.contact-box ul li a {
+    color: #333;
+    font-size: 30px !important;
+    position: absolute;
+    top: 10px;
+}
+
+.contact-box ul li .fa-location-dot {
+    color: #191919;
+    text-shadow: -1px -1px 4px rgba(60, 60, 60, 0.8),
+                 5px 5px 8px rgba(10,10,10,0.9);
+}
+
+.contact-box ul li .fa-phone {
+    color: #191919;
+    text-shadow: -1px -1px 4px rgba(60, 60, 60, 0.8),
+                 5px 5px 8px rgba(10,10,10,0.9);
+}
+
+.contact-box ul li .fa-envelope {
+    color: #191919;
+    text-shadow: -1px -1px 4px rgba(60, 60, 60, 0.8),
+                 5px 5px 8px rgba(10,10,10,0.9);
+}
+
+.contact-box ul li p {
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    font-weight: 10;
+    left: px;
+    width: 80%;
+    position: relative;
+    top: 80px;
+}
+
+
